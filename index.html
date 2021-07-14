@@ -162,6 +162,88 @@ def somefunc(a:int, b:int) -> int
 Official documentation: https://lnkd.in/eCDEfkQ
 
 </p>
+
+<h2>Day 8 of #66daysofdata</h2>
+<p>
+	
+
+Generators in Python
+
+Assume you have a lot of data and you want to play around with the data, creating new lists can be one option where an entirely new list is returned after the transformation, another less memory intensive option is a "Generator" where at any point of time only one record is output however the state is preserved.
+
+Lists are iterable. We can traverse through the lists using for loop.
+Generator is an iterator in which the data is accessed though the __next__ method. Every iterator is an iterable too thus for loop will also work.
+https://www.geeksforgeeks.org/python-difference-iterable-iterator/
+
+The difference between list and a generator would be that you can try to iterate through the list again and again, however you can iterate only once through the generator object after which it does not output any data and gives a "StopIteration" exception.
+
+"yield" keyword in python is used to create generator object.
+
+How do we implement Generators
+
+Following is an example code:
+
+def list_of_data_for_range():
+    # Using List Comprehension
+    range_list = [x + 1 for x in range(5)]
+    return range_list
+
+
+def generator_of_data_for_range():
+    for i in range(5):
+        yield i + 1
+
+
+if __name__ == "__main__":
+    print("/************** List ***********/")
+    print(list_of_data_for_range())
+    print("Run list again")
+    print(list_of_data_for_range())
+
+    print("/************* Generator ************/")
+    generator_data = generator_of_data_for_range()
+    print("Print what is received in generator")
+    print(generator_data)
+    # Using the next method
+    print("Print first item of generator")
+    print(next(generator_data))
+    # Using for loop like any iterable
+    print("Print remaining items of generator")
+    for data in generator_data:
+        print(data)
+
+    print("Rerun iteration on generator")
+    print(next(generator_data))
+
+
+    Output:
+
+	/************** List ***********/
+	[1, 2, 3, 4, 5]
+	Run list again
+	[1, 2, 3, 4, 5]
+	/************* Generator ************/
+	Print what is received in generator
+	<generator object generator_of_data_for_range at 0x100ee1f20>
+	Print first item of generator
+	1
+	Print remaining items of generator
+	2
+	3
+	4
+	5
+	Rerun iteration on generator
+	Traceback (most recent call last):
+	  File "generator.py", line 31, in <module>
+	    print(next(generator_data))
+	StopIteration
+
+	Process finished with exit code 1
+
+
+
+More context: https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do 
+</p>
 </body>
 
 </html>
