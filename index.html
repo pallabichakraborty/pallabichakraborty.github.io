@@ -72,6 +72,96 @@
 
 	Comment and tell me, what do you think? Is there something which is important that I should also know about mutability
 	</p>
+
+
+	<h2>Day 3 of #66daysofdata</h2>
+	<p>
+		
+
+	Zip in Python
+
+	Sometime we get data for related fields like height and weight of a person in separate lists however there is a need to group them together.
+
+	person = ["Tom", "George", "Harry"]
+	weight = [10, 12, 14]
+	height = [100, 103, 167]
+
+	How do we aggregate them together
+
+	Option 1: Use for loop and using the indexes put them together.
+
+	Option 2 (zip) : Use the function zip, this can help to group the values together grouping on the basis of the individual sequence in the original lists
+
+	>> zipped = zip(person,weight,height)
+
+	One can make lists, dictionaries on top of it
+
+	>> list(zipped)
+	[('Tom', 10, 100), ('George', 12, 103), ('Harry', 14, 167)]
+
+	https://lnkd.in/eJcVJ-A
+	</p>
+
+
+	<h2>Day 4 of #66daysofdata</h2>
+	<p>
+		
+
+		List Comprehension in Python
+
+		This provides a much compressed approach of creating a list using another iterable which can be another list on its own.
+
+		Along with implementing the for loop it also gives the option to add if/ else statements in case of conditions to be checked for adding values.
+
+		In case of list comprehension, array does not need to be declared beforehand
+
+		new_list = [x*x if x%5==0 else x for x in old_list]
+
+		https://lnkd.in/e4mBKWV
+
+		#python
+	</p>	
+
+	<h2>Day 5 of #66daysofdata</h2>
+	<p>
+
+
+	Docstring conventions
+
+	Documentation of the modules programmed is extremely essential, it not only makes the code easier to read but also makes it understandable.
+
+	As per the Python documentation, "A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition." .
+
+	Comments and Docstring are similar due to the fact that both provides useful additional information about the code. However docstring is different from the comments given it consists of the first lines in the code which provides the details of the purpose and attributes of the definition.
+
+	def method name():
+	"""
+	Docstring with details mentioned
+	"""
+
+	How do we access it? Through the special attribute __doc__ or the help function
+
+	>> print(print.__doc__)
+	>> help(print)
+
+	This is an old but good page to refer : https://lnkd.in/eVpZNNm
+
+	https://lnkd.in/eTU5hWH
+
+	</p>
+
+	<h2>Day 6 of #66daysofdata</h2>
+	<p>
+
+Function Annotation in Python
+
+These are completely optional metadata added rather for usage by the developers than anything else. The interpreter does not understand these annotations and computes the operations
+
+def somefunc(a:int, b:int) -> int
+
+Official documentation: https://lnkd.in/eCDEfkQ
+
+</p>
 </body>
 
 </html>
