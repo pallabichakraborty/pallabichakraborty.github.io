@@ -3,6 +3,75 @@
 <body>
 	<h1>My First Post</h1>
 	<p> I did this with Github. </p>
+
+	<h2> Day 1 of #66daysofdata  </h2>
+	<p>
+		I started with revising the basics of Python. There are some expressions which always create some confusion. Sharing some of them
+
+		1) Do you know the difference between round(4.8) and int(4.8)?
+		Try guessing before proceeding further.
+		int(x) removes whatever is present after the decimal.
+
+		Code Sample:
+		>>> int(4.8)
+		4
+		>>> round(4.8)
+		5
+		>>> int(4.2)
+		4
+		>>> round(4.2)
+		4
+
+		2) What would be the output for the expression (True or False):
+		0.2+0.2+0.2==0.6
+
+		If your answer was False, you guessed it right.
+
+		Explanation:
+		If you run 0.2+0.2+0.2, following is the output
+		>>> 0.2+0.2+0.2
+		0.6000000000000001
+
+		You would wonder why? This is because the data is stored as binary format(base 2) in the computer, thus there is never a perfect base 10 number stored.
+
+		So what is the solution, try rounding up after the summation, this brings the value as close as position to base 10:
+		>> round(0.2+0.2+0.2,2)==round(0.6,2)
+		True
+
+		Reference: https://lnkd.in/e5MdDza
+
+		Amazing concept Ken Jee
+	</p>
+
+
+	<h2>Day 2 of #66daysofdata</h2>
+	<p>
+		
+
+	 Learn Python with me or revise if you know it already :)
+
+	 Mutable vs Immutable Objects
+	 -------------------------------
+
+	 Mutable objects can be modified after their creation, same is not true in case of Immutable objects. 
+
+	 What does this mean ? 
+
+	 This means that a part of the object can be modified or something can be added without actually changing the reference pointer for a mutable object.
+	Immutable objects cannot be modified but the value for the same can be reassigned, this basically creates a new reference pointer abandoning the previous one.
+
+	Example for Mutable Objects: List, dict,set
+	Example for Immutable Obkect: String, int, float
+
+	What does this imply?
+
+	This means that for a list listA[1]=4 is valid
+	however for a string somestr,
+
+	somestr[1]='1' will cause an exception
+
+	Comment and tell me, what do you think? Is there something which is important that I should also know about mutability
+	</p>
 </body>
 
 </html>
